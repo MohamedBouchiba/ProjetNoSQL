@@ -1,0 +1,6 @@
+
+LOAD CSV WITH HEADERS FROM "file:///movielens.csv" AS csvLine
+CREATE (p:Film {id: toInteger(csvLine.movie_id), titre: csvLine.title, genres: csvLine.genres, note: csvLine.rating})
+
+
+file://home/mbouchiba/Bureau/ProjetNoSQL/movielens.csv
